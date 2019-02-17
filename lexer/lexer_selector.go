@@ -8,7 +8,7 @@ func IsInterpolationStartToken(r rune, r2 rune) bool {
 	return r == '#' && r2 == '{'
 }
 
-// does not test ' '
+// IsCombinatorToken does not test ' '
 func IsCombinatorToken(r rune) bool {
 	return r == '>' || r == '+' || r == ',' || r == '~'
 }

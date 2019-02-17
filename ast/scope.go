@@ -25,7 +25,7 @@ func (s *Scope) Insert(obj *Object) (alt *Object) {
 	return
 }
 
-// Debugging support
+// String: Debugging support
 func (s *Scope) String() string {
 	var buf bytes.Buffer
 	fmt.Fprintf(&buf, "Scope %p {", s)
@@ -67,7 +67,7 @@ var objectKindStrings = [...]string{
 
 func (kind ObjectKind) String() string { return objectKindStrings[kind] }
 
-// This function creates a new object of a given kind and name.
+// NewObject: creates a new object of a given kind and name.
 func NewObject(kind ObjectKind, name string) *Object {
 	return &Object{Kind: kind, Name: name}
 }

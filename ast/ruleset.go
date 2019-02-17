@@ -17,7 +17,7 @@ func (self *RuleSet) GetSubRuleSets() []*RuleSet {
 	return self.Block.SubRuleSets
 }
 
-// Complete the statement interface
+// CanBeStmt: Complete the statement interface
 func (self *RuleSet) CanBeStmt() {}
 
 func (self RuleSet) String() string {

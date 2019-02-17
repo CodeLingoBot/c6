@@ -41,7 +41,7 @@ func NewHexColor(hex string, token *Token) *HexColor {
 	return &HexColor{Hex(hex), r, g, b, token}
 }
 
-// HexToRGB converts an Hex string to a RGB triple.
+// HexToRGBA: HexToRGBA converts an Hex string to a RGB triple.
 func HexToRGBA(h string) (uint32, uint32, uint32, float32) {
 	if len(h) > 0 && h[0] == '#' {
 		h = h[1:]

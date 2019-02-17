@@ -10,7 +10,7 @@ type RGBAColor struct {
 	Token *Token
 }
 
-// Factor functions
+// NewRGBAColorWithHexCode: Factor functions
 func NewRGBAColorWithHexCode(hex string, token *Token) *RGBAColor {
 	var r, g, b, a = HexToRGBA(hex)
 	return &RGBAColor{r, g, b, a, token}

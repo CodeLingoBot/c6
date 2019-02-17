@@ -13,15 +13,13 @@ func NewNumber(num float64, unit *Unit, token *Token) *Number {
 	return &Number{num, false, unit, token}
 }
 
-/*
-Mark the number as an double (value with precision)
+/* SetDouble: Mark the number as an double (value with precision)
 */
 func (num *Number) SetDouble() {
 	num.double = true
 }
 
-/*
-Check if the number is a floating value.
+/* IsDouble checks if the number is a floating value.
 */
 func (num *Number) IsDouble() bool {
 	return num.double

@@ -7,8 +7,7 @@ type List struct {
 	Exprs     []Expr
 }
 
-/*
-When there is more than one item, we return true for boolean context
+/* Boolean: When there is more than one item, we return true for boolean context
 */
 func (self List) Boolean() bool {
 	return len(self.Exprs) > 0
@@ -35,7 +34,7 @@ func (list *List) Append(expr Expr) {
 	list.Exprs = newList
 }
 
-// By the default, the separator is space
+// NewList: By the default, the separator is space
 func NewList(sep string) *List {
 	return &List{sep, []Expr{}}
 }

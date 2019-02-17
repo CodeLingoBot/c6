@@ -10,8 +10,7 @@ func CanReduceExpr(expr ast.Expr) bool {
 	return true
 }
 
-/*
-Reduce constant expression to constant.
+/* ReduceExpr: Reduce constant expression to constant.
 
 @return (Value, ok)
 

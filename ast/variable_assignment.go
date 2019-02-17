@@ -13,8 +13,7 @@ type AssignStmt struct {
 	Important bool
 }
 
-/*
-Property is one of the declaration
+/* CanBeDeclaration: Property is one of the declaration
 */
 func (self AssignStmt) CanBeDeclaration() {}
 func (self AssignStmt) CanBeStmt()        {}

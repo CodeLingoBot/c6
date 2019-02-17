@@ -299,8 +299,7 @@ func Compute(op *ast.Op, a ast.Value, b ast.Value) ast.Value {
 	return nil
 }
 
-/*
-A simple expression means the operands are scalar, and can be evaluated.
+/* IsSimpleExpr: A simple expression means the operands are scalar, and can be evaluated.
 */
 func IsSimpleExpr(expr ast.Expr) bool {
 	switch e := expr.(type) {
@@ -316,8 +315,7 @@ func IsSimpleExpr(expr ast.Expr) bool {
 	return false
 }
 
-/*
-This function returns true when the val is a scalar value, not an expression.
+/* IsValue returns true when the val is a scalar value, not an expression.
 */
 func IsValue(val ast.Expr) bool {
 	switch val.(type) {

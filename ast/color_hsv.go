@@ -27,7 +27,7 @@ func (c HSVColor) RGBColor() *RGBColor {
 	return NewRGBColor(uint32(r), uint32(g), uint32(b), nil)
 }
 
-// hsv() is not supported in CSS3, we need to convert it to hex color
+// String: hsv() is not supported in CSS3, we need to convert it to hex color
 func (self HSVColor) String() string {
 	return fmt.Sprintf("hsv(%G, %G, %G)", self.H, self.S, self.V)
 }

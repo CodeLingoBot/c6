@@ -15,7 +15,7 @@ func NewBlock() *Block {
 	}
 }
 
-// Override the statements
+// SetStmts: Override the statements
 func (self *Block) SetStmts(stms *StmtList) {
 	self.Stmts = stms
 }

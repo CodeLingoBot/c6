@@ -39,8 +39,7 @@ func (self BinaryExpr) String() string {
 	return out
 }
 
-/*
-If any of left or right is variable, than it's constant expression. this is
+/* IsSimpleExpr: If any of left or right is variable, than it's constant expression. this is
 used to eliminate simple expression when the parser is parsing...
 
 Please note thist method does not test CSS slash, the caller should handle by itself.

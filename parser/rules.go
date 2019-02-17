@@ -197,8 +197,7 @@ func (parser *Parser) ParseIfStmt() ast.Stmt {
 	return stm
 }
 
-/*
-The operator precedence is described here
+/* ParseCondition: The operator precedence is described here
 
 @see http://introcs.cs.princeton.edu/java/11precedence/
 */
@@ -515,8 +514,7 @@ func (parser *Parser) ParseNumber() ast.Expr {
 	return ast.NewNumber(val, nil, tok)
 }
 
-/*
-This parse method looks up the argument in the function declaration and convert
+/* ParseKeywordArguments: This parse method looks up the argument in the function declaration and convert
 the keyword arguments into the argument list. this way, we can handle the function call
 in a simple way - push/pop the stack.
 
@@ -860,8 +858,7 @@ func (parser *Parser) ParseValueStrict() ast.Expr {
 	return parser.ParseExpr(false)
 }
 
-/*
-Parse string literal expression (literal concat with interpolation)
+/* ParseLiteralExpr: Parse string literal expression (literal concat with interpolation)
 */
 func (parser *Parser) ParseLiteralExpr() ast.Expr {
 	if expr := parser.ParseExpr(false); expr != nil {
@@ -1227,8 +1224,7 @@ func (parser *Parser) ParseCharsetStmt() ast.Stmt {
 	return stm
 }
 
-/*
-	Media Query Syntax:
+/* ParseMediaQueryStmt: Media Query Syntax:
 	https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries
 */
 func (parser *Parser) ParseMediaQueryStmt() ast.Stmt {
@@ -1257,8 +1253,7 @@ func (parser *Parser) ParseMediaQueryList() *ast.MediaQueryList {
 	return queries
 }
 
-/*
-This method parses media type first, then expecting more that on media
+/* ParseMediaQuery: parses media type first, then expecting more that on media
 expressions.
 
 media_query: [[only | not]? <media_type> [ and <expression> ]*]
@@ -1322,8 +1317,7 @@ func (parser *Parser) ParseMediaType() *ast.MediaType {
 	return nil
 }
 
-/*
-An media query expression must start with a '(' and ends with ')'
+/* ParseMediaQueryExpr: An media query expression must start with a '(' and ends with ')'
 */
 func (parser *Parser) ParseMediaQueryExpr() ast.Expr {
 
@@ -1352,8 +1346,7 @@ func (parser *Parser) ParseWhileStmt() ast.Stmt {
 	return ast.NewWhileStmt(condition, block)
 }
 
-/*
-Parse the SASS @for statement.
+/* ParseForStmt: Parse the SASS @for statement.
 
 	@for $var from <start> to <end> {  }
 
@@ -1428,8 +1421,7 @@ func (parser *Parser) ParseForStmt() ast.Stmt {
 	return stm
 }
 
-/*
-The @import syntax is described here:
+/* ParseImportStmt: The @import syntax is described here:
 
 @see CSS2.1 http://www.w3.org/TR/CSS2/cascade.html#at-import
 
